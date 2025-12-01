@@ -60,12 +60,6 @@ A privacy-first, offline desktop application for comparing text differences. Bui
 - **No telemetry** - Zero analytics or tracking
 - **No cloud sync** - Complete privacy
 
-## Screenshots
-
-*Add screenshots of your application here*
-
-## Installation
-
 ### Prerequisites
 - Node.js 18+ and npm
 - Git
@@ -232,25 +226,3 @@ The project uses:
 - **macOS** - Full support with native title bar
 - **Windows** - Full support
 - **Linux** - Full support
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-*Add your license information here*
-
-## Acknowledgments
-
-- Built with [Electron](https://www.electronjs.org/)
-- UI components from [Radix UI](https://www.radix-ui.com/)
-- Diff algorithm from [diff](https://github.com/kpdecker/jsdiff)
-- Icons from [Lucide](https://lucide.dev/)
-
