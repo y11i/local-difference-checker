@@ -70,9 +70,9 @@ export const DiffViewer = memo(
           ref={refCallback}
           className={cn(
             'border-b border-border/70 text-sm transition-colors',
-            row.type === 'added' && 'bg-emerald-500/10',
-            row.type === 'removed' && 'bg-red-500/10',
-            row.type === 'changed' && 'bg-amber-500/10',
+            row.type === 'added' && 'bg-emerald-500/20 dark:bg-emerald-500/30',
+            row.type === 'removed' && 'bg-red-500/20 dark:bg-red-500/30',
+            row.type === 'changed' && 'bg-amber-500/20 dark:bg-amber-500/30',
             isHighlighted && 'ring-2 ring-primary',
             viewMode === 'split' ? 'grid grid-cols-[64px_1fr_64px_1fr]' : 'grid grid-cols-[64px_1fr]'
           )}
@@ -149,9 +149,9 @@ function LineNumber({ value, type, align = 'left', prefix }: LineNumberProps) {
       className={cn(
         'px-3 py-1 text-xs font-semibold text-muted-foreground/70',
         align === 'right' ? 'text-right' : 'text-left',
-        type === 'added' && 'text-emerald-600',
-        type === 'removed' && 'text-red-600',
-        type === 'changed' && 'text-amber-600'
+        type === 'added' && 'text-emerald-600 dark:text-emerald-400',
+        type === 'removed' && 'text-red-600 dark:text-red-400',
+        type === 'changed' && 'text-amber-600 dark:text-amber-400'
       )}
     >
       {prefix && <span className="mr-1">{prefix}</span>}
@@ -220,13 +220,13 @@ function visualizeWhitespace(value: string, enabled: boolean) {
 
 function segmentClass(segmentType: string, rowType: DiffRow['type']) {
   if (segmentType === 'added') {
-    return 'bg-emerald-500/20';
+    return 'bg-emerald-500/30 dark:bg-emerald-500/40';
   }
   if (segmentType === 'removed') {
-    return 'bg-red-500/20';
+    return 'bg-red-500/30 dark:bg-red-500/40';
   }
   if (rowType === 'changed') {
-    return 'bg-amber-500/15';
+    return 'bg-amber-500/25 dark:bg-amber-500/35';
   }
   return undefined;
 }
